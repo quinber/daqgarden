@@ -5,7 +5,6 @@
  margin: 0;
  padding: 0;
  box-sizing: border-box; 
- font-family:Verdana, Geneva, Tahoma, sans-serif;
  outline: none;
  border: none;
  text-decoration: none; 
@@ -44,6 +43,9 @@ html{
 }
 .btn:hover {
     background: var(--pink);
+}
+.header-style{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 header{
     position: relative;
@@ -140,9 +142,7 @@ header .fa-bars{
     left: 100%;
     border-top: 1px solid #ccc;
   }
-*{
-    margin: 0;
-    padding: 0;
+body{
     font-family: "Bitter", serif;
 }
 .banner{
