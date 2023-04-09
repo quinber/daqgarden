@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap');
+:root{
+   --pink:#e84393;
+}
+*{
+   font-family:Verdana, Geneva, Tahoma, sans-serif;
+   margin:0; padding:0;
+   box-sizing: border-box;
+   outline: none; border:none;
+   text-decoration: none;
+   text-transform: capitalize;
+}
+
+html{
+   font-size: 62.5%;
+   scroll-padding-top:6rem;
+   overflow-x: hidden;
+}
+header{
+   position: relative;
+   top:0; left:0; right:0;
+   background: #fff;
+   padding:2rem 9%;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   z-index: 1000;
+   box-shadow: 0 .5rem 1rem rgba(0,0,0, .1);
+}
+header .logo{
+   font-size: 3rem;
+   color: #333;
+   font-weight: bolder;
+}
+header .logo span{
+   color:var(--pink);
+}
+header .navbar a{
+   font-size: 2rem;
+   padding: 0 1.5rem;
+   color: #666;
+}
+header .navbar a:hover{
+   color:var(--pink);
+}
+header .icon a{
+   font-size: 2.5rem;
+   color: #333;
+   margin-left: 1.5rem;
+}
+header .icon a:hover{
+   color:var(--pink);
+}
+header #toggler{
+   display: none;
+}
+header .fa-bars{
+   font-size: 3rem;
+   color: #333;
+   border-radius: .5rem ;
+   padding: .5rem 1.5rem;
+   cursor: pointer;
+   border: .1rem solid rgba(0.0,0,.3);
+}
+.menu {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+ }
+ 
+ .menu > li {
+   display: inline-block;
+   position: relative;
+   padding: 10px 20px;
+ }
+ 
+ .menu > li:hover {
+   background-color: #f5f5f5;
+ }
+ 
+ .menu > li ul {
+   display: none;
+   position: absolute;
+   top: 100%;
+   left: 0;
+   padding: 0;
+   margin: 0;
+   background-color: #fff;
+   border: 1px solid #ccc;
+ }
+ 
+ .menu > li:hover ul {
+   display: block;
+ }
+ 
+ .menu > li ul li {
+   display: block;
+   padding: 10px 20px;
+ }
+ 
+ .menu > li ul li:hover {
+   background-color: #f5f5f5;
+ }
+ 
+ .menu > li ul ul {
+   top: 0;
+   left: 100%;
+   border-top: 1px solid #ccc;
+ }
+ 
+
+body{
+   background: #eee;
+}
+
+.container{
+   max-width: 1200px;
+   margin:0 auto;
+   padding:3rem 2rem;
+}
+
+.container .title{
+   font-size: 3.5rem;
+   color:#444;
+   margin-bottom: 3rem;
+   text-transform: uppercase;
+   text-align: center;
+}
+
+.container .products-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+   gap:2rem;
+}
+
+.container .products-container .product{
+   text-align: center;
+   padding:3rem 2rem;
+   background: #fff;
+   box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+   border-radius: 10%;
+   outline: .1rem solid #ccc;
+   outline-offset: -1.5rem;
+   cursor: pointer;
+}
+
+.container .products-container .product:hover{
+   outline: .2rem solid #222;
+   outline-offset: 0;
+}
+
+.container .products-container .product img{
+   height: 25rem;
+}
+
+.container .products-container .product:hover img{
+   transform: scale(.9);
+}
+
+.container .products-container .product h3{
+   padding:.5rem 0;
+   font-size: 2rem;
+   color:#444;
+}
+
+.container .products-container .product:hover h3{
+   color:#27ae60;
+}
+
+.container .products-container .product .price{
+   font-size: 2rem;
+   color:#444;
+}
+
+.products-preview{
+   position: fixed;
+   top:0; left:0;
+   min-height: 100vh;
+   height: 113%;
+   width: 100%;
+   background: rgba(0,0,0,.8);
+   display: none;
+   align-items: center;
+   justify-content: center;
+}
+
+.products-preview .preview{
+   display: none;
+   padding:2rem;
+   text-align: center;
+   background: #fff;
+   position: relative;
+   margin:  2rem;
+   width: 40rem;
+}
+
+.products-preview .preview.active{
+   display: inline-block;
+}
+
+.products-preview .preview img{
+   height: 20rem;
+}
+
+.products-preview .preview .fa-times{
+   position: absolute;
+   top:1rem; right:1.5rem;
+   cursor: pointer;
+   color:#444;
+   font-size: 4rem;
+}
+
+.products-preview .preview .fa-times:hover{
+   transform: rotate(90deg);
+}
+
+.products-preview .preview h3{
+   color:#444;
+   padding:.5rem 0;
+   font-size: 2.5rem;
+}
+
+.products-preview .preview .stars{
+   padding:1rem 0;
+   font-size: 1.7rem;
+}
+
+.products-preview .preview .stars i{
+   color:#27ae60;
+}
+
+.products-preview .preview .stars span{
+   color:#999;
+}
+
+.products-preview .preview p{
+   line-height: 1.5;
+   padding:1rem 0;
+   font-size: 1.6rem;
+   color:#777;
+}
+
+.products-preview .preview .price{
+   padding:1rem 0;
+   font-size: 2.5rem;
+   color:#27ae60;
+}
+
+.products-preview .preview .buttons{
+   display: flex;
+   gap:1.5rem;
+   flex-wrap: wrap;
+   margin-top: 1rem;
+}
+
+.products-preview .preview .buttons a{
+   flex:1 1 16rem;
+   padding:1rem;
+   font-size: 1.8rem;
+   color:#444;
+   border:.1rem solid #444;
+}
+
+.products-preview .preview .buttons a.cart{
+   background: #444;
+   color:#fff;
+}
+
+.products-preview .preview .buttons a.cart:hover{
+   background: #111;
+}
+
+.products-preview .preview .buttons a.buy:hover{
+   background: #444;
+   color:#fff;
+}
+
+.footer .container{
+   max-width: 1150px;
+   margin:auto;
+}
+.footer{
+   background: #FFE3E1;
+
+}
+
+.footer .footer-row{
+   display: flex;
+   flex-wrap: wrap;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+   font-size: 18px;
+   color: #FF9494;
+   margin-bottom: 35px;
+   font-weight: 500;
+   position: flex;
+}
+/* .footer-col h4:before{
+   content:'' ;
+   position: absolute;
+   left: 0;
+   bottom: -10px;
+   background: #9CB4CC;
+   height: 2px;
+   box-sizing: border-box;
+   width: 55px;
+} */
+.footer-col p{
+   color: #AC7088; 
+   font-size: 16px;
+}
+iframe{
+   width: 150%;
+   height: 150px;
+   margin-top: 10px;
+}
+.footer-col ul{
+   list-style: none;
+}
+.footer-col ul li a{
+   font-size: 16px;
+   text-decoration: none;
+   color: #FF9494;
+   display: block;
+   transition: all .3ease;
+}
+.footer-col ul li a:hover{
+   color: #F8C4B4;
+   padding-left: 6px;
+}
+.footer-col .social-link a{
+   display: inline-block;
+   height: 40px;
+   width: 40px;
+   background:#AC7088;
+   margin: 0 10px 10 0px;
+   text-align: center;
+   line-height: 40px;
+   border-radius: 50%;
+   color: #fff;
+   transition: all .5s ease;
+}
+.footer-col .social-link a:hover{
+   color: #24262b;
+   background: #fff;
+}
+.footer-col .social-link i{
+   font-size: 15px;
+}
