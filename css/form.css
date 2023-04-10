@@ -45,6 +45,9 @@ html{
 .btn:hover {
   background: var(--pink);
 }
+.header-style{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
 header{
   position: relative;
   top:0; left:0; right:0;
@@ -140,6 +143,10 @@ header .fa-bars{
   left: 100%;
   border-top: 1px solid #ccc;
 }
+body{
+  font-family: 'poppins',sans-serif;
+  font-size: 1.5rem;
+}
 section{
   display: flex;
   justify-content: center;
@@ -170,9 +177,10 @@ h2{
   text-align: center;
 }
 .inputbox{
+  font-size: 2.5rem;
   position: relative;
   margin: 30px 0;
-  width: 310px;
+  width: 380px;
   border-bottom: 2px solid #fff;
 }
 .inputbox label{
@@ -181,7 +189,7 @@ h2{
   left: 5px;
   transform: translateY(-50%);
   color: #fff;
-  font-size: 1em;
+  font-size: 1.7rem;
   pointer-events: none;
   transition: .5s;
 }
@@ -195,7 +203,7 @@ top: -5px;
   background: transparent;
   border: none;
   outline: none;
-  font-size: 1.0em;
+  font-size: 1.0rem;
   padding:0 35px 0 5px;
   color: #fff;
 }
@@ -203,7 +211,7 @@ top: -5px;
   position: absolute;
   right: 8px;
   color: #fff;
-  font-size: 1.2em;
+  font-size: 1.em;
   top: 20px;
 }
 
@@ -231,7 +239,7 @@ button{
   font-weight: 600;
 }
 .register{
-  font-size: .9em;
+  font-size: 1.0em;
   color: #fff;
   text-align: center;
   margin: 25px 0 10px;
